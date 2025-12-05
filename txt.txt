@@ -1,0 +1,75 @@
+sistema final
+pasos para la elaboracion del sistema
+1. Cargar la base de datos
+   El sistema debe permitir la carga de un archivo en formato csv
+   Que contenga la variable dependiente y las variables independientes
+   El usuario debe poder seleccionar el archivo mediante la interfaz grafica
+   Se recomienda incluir:
+        Vista previa de las primera filas
+   	Deteccion automatica del delimitador
+ 	validacion de nombre de variables
+2. Limpieza de los datos
+   El modulo de limpieza debe ofrecer como minimo:
+	Eliminacion o imputacion de los valores faltantes
+	Deteccion de valores atipicos
+	Conversion de los tipos de variable
+	El sistema debe mostrar estadisticas descriptivas:
+		-Media
+		-Varianza
+		-Minimos y maximos
+		-Cuartiles
+3. Estimacion del modelo de regresion
+	El sistema debe implementar el modelo la regresion multivariada de la forma:
+		- y = b0+b1x1+b2x2+...+bkxk+e
+	El sistema debe calcular:
+		- coeficientes estimados \(\beta \))
+		- Error estandar de cada coeficiente
+		- Estadistico T
+                - Valor P asociado
+	Los resultados deben mostrarse en la interfaz del sistema de manera clara y estructurada
+4. Validacion del sistema 
+   	el sistema debe incluir modulos para ejecutar pruebas:
+	4.1 Prueba de normalidad de los residuos
+		se debe implementar al menos uno de los siguientes tests:
+			- Shapiro Wilk 
+			- Kolmogorov-Smirnov
+			- Jarque-Bera
+   	el sistema debe mostrar:
+		- estadistico de prueba 
+		- Valor P
+		- Conclusion Automatica
+	4.2 Prueba de autocorrelacion
+		se debe implementar el estadistico Durbin-Watson, indicado si existe autocorrelacion
+		positiva o negativa. 
+	4.3 Prueba de Homocedasticidad
+		El sistema debe implementar:
+			- Prueba de Breusch-Pagan, o 
+			- prueba de white
+	4.4 Medicion de multicolinealidad
+		Los estudiantes deben caldular el VIF (Variance Inflation Factor):
+			VIF_i= 1 / (1-(R_i)^2)
+	La interfaz debe resaltar coeficientes con VIF mayor a 10.
+5. Generacion de Graficos
+   el sistema debe generar los siguientes graficos:
+	5.1 Diagrama de dispersion
+		para cada variable independiente X_i frente a Y
+	5.2 Histograma de residuos
+		Para evaluar la forma de la distribucion
+	5.3 Grafico Q-Q
+		De los residuos comparados con la distribucion normal
+	5.4 Grafico de residuos estandar
+		Contra los valores ajustados
+6. Requisitos de la interfaz del sistema 
+   El proyecto debe incluir una interfaz grafica o web que permita al usuario:
+	- Cargar el archivo CSV
+	- Seleccionar que variables usa como dependiente o independiente.
+   	- Visualizar las estadisticas descriptivas.
+	- Ejecutar la estimacion del modelo
+	- Ver los resultados completos en pantalla
+	- Ejecutar las pruebas estadisticas
+	- Generar y descargar graficos
+7. En esta practica se debe diseñar un sistema completo que permita realizar una regresion multivariada y validar el modelo con pruebas estadisticas.
+		
+
+	
+	
